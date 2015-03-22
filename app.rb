@@ -14,7 +14,7 @@ use Rack::Auth::Basic, "Restricted Area" do |username, password|
 
 
 	get '/' do
-	    erb :form2
+	    erb :form
 	end
 
 	post '/' do
