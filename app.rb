@@ -1,9 +1,13 @@
 require 'sinatra'
+require 'pony'
+require 'haml'
 load 'cron.rb'
 
 set :port, 8080
 set :static, true
 set :views, "views"
+
+
 
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
   username == 'admin' and password == 'admin'
@@ -37,16 +41,36 @@ use Rack::Auth::Basic, "Restricted Area" do |username, password|
         cron += b.GenCron(vbegin,v,pv)
 	b.WriteCron(cron)
 
+	msg  = "Здпавейте, \n \nРазписанието за биенето на звънеца бе променено:\n\nПърва смяна:\n\n"
+	msg += b.MailMsg(pbegin,p,pp) + "\nВтора смяна:\n\n"
+	msg += b.MailMsg(vbegin,v,pv) + "\n"
+	msg += "Това е автоматично генериран имейл, моля не отговаряйте."
+
+	         
 	    #erb :index, :locals => {'greeting' => greeting, 'name' => name, 'amount1' => amount1}
 
+	    options = {
+	    :to => '@gmail.com',
+	    :from => '@gmail.com',
+	    :subject => 'Звънец',
+	    :body => msg,
+	    #:html_body => (haml :test),
+	    :via => :smtp,
+	    :via_options => {
+	      :address => 'smtp.gmail.com',
+	      :port => 587,
+	      :enable_starttls_auto => true,
+	      :user_name => '',
+	      :password => '',
+	      :authentication => :plain,
+	      :domain => 'HELO'
+			    }
+ 	    }
+
+  Pony.mail(options)
+
 	
-		
 	end
 
 
 end
-
-get '/log' do
-	    erb :form
-	end
-

@@ -45,5 +45,21 @@ class Bell
 		end
 	    return cron
 	end
+
+	def MailMsg(pbegin, lesson, pause)
+		hour_spell = [nil,nil,"Втори час: ","Трети час: ","Четвърти час: ","Пети час: ","Шести час: ", "Седми час: "]
+		msg = "Първи час: #{pbegin} - #{ModAdd(pbegin,lesson[1])} (#{lesson[1]} мин.) \n"
+		current = ModAdd(pbegin,lesson[1].to_i+pause[1].to_i)
+		for i in 2..7 
+			msg +=	hour_spell[i] + current + " - "
+			msg += ModAdd(current,lesson[i]) + " (#{lesson[i]} мин.)"+ "\n"
+			current =  ModAdd(current,lesson[i].to_i+pause[i].to_i)
+
+		end
+	    return msg
+	
+	end
 end
+
+
 
