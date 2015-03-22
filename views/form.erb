@@ -1,0 +1,474 @@
+<html>
+    <head>
+	<meta charset="utf-8" />
+	<title>Звънец</title>
+
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.3/themes/redmond/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="/css/form137.css" media="screen" />
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+	<script src="/script/jquery.mousewheel.js"></script>
+	<script src="/script/globalize.culture.de-DE.js"></script>
+	<script src="/script/globalize.js"></script>
+
+	<script>
+
+		$.widget( "ui.timespinner", $.ui.spinner, {
+   		 options: {
+    		  // seconds
+     		 step: 60 * 1000,
+    		  // hours
+    		  page: 60
+   		 },
+
+		parse: function( value ) {
+	      if ( typeof value === "string" ) {
+		// already a timestamp
+		if ( Number( value ) == value ) {
+		  return Number( value );
+		}
+		return +Globalize.parseDate( value );
+		      }
+		      return value;
+		    },
+
+		_format: function( value ) {
+		return Globalize.format( new Date(value), "t" );
+		}
+		});
+
+		$(function() {
+
+			Globalize.culture("de-DE");
+			$( "#spinner1" ).timespinner();
+			$( "#spinner2" ).timespinner();			
+
+			$( "#datepicker" ).datepicker();
+			$( "#bounce" ).change(function() {
+			$( "#datepicker" ).datepicker( "option", "showAnim", $( this ).val() );
+			});
+
+			 $( "#tabs" ).tabs({
+				event: "mouseover"
+			});
+
+		$( "#slider1" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount1" ).val( ui.value );
+						}
+						});
+				$ ( "#amount1" ).val( $( "#slider1" ).slider( "value" ) );
+
+			
+		$( "#slider2" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount2" ).val( ui.value );
+						}
+						});
+				$ ( "#amount2" ).val( $( "#slider2" ).slider( "value" )   );
+					var dgd =   $("#slider2" ).slider( "value" );
+					console.log(dgd);	
+								
+				
+				$( "#slider3" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount3" ).val( ui.value );
+						}
+						});
+				$ ( "#amount3" ).val( $( "#slider3" ).slider( "value" )   );
+				
+
+				
+				$( "#slider4" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount4" ).val( ui.value );
+						}
+						});
+				$ ( "#amount4" ).val( $( "#slider4" ).slider( "value" )   );
+				
+
+				$( "#slider5" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount5" ).val( ui.value );
+						}
+						});
+				$ ( "#amount5" ).val( $( "#slider5" ).slider( "value" )   );
+				
+
+
+				$( "#slider6" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount6" ).val( ui.value );
+						}
+						});
+				$ ( "#amount6" ).val( $( "#slider6" ).slider( "value" )   );
+				
+
+
+				$( "#slider7" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount7" ).val( ui.value );
+						}
+						});
+				$ ( "#amount7" ).val( $( "#slider7" ).slider( "value" )   );
+				
+
+				$( "#slider8" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount8" ).val( ui.value );
+						}
+						});
+				$ ( "#amount8" ).val( $( "#slider8" ).slider( "value" )   );
+				
+
+
+				$( "#slider9" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount9" ).val( ui.value );
+						}
+						});
+				$ ( "#amount9" ).val( $( "#slider9" ).slider( "value" )   );
+				
+
+				$( "#slider10" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount10" ).val( ui.value );
+						}
+						});
+				$ ( "#amount10" ).val( $( "#slider10" ).slider( "value" )   );
+				
+
+				$( "#slider11" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount11" ).val( ui.value );
+						}
+						});
+				$ ( "#amount11" ).val( $( "#slider11" ).slider( "value" )   );
+				
+
+				$( "#slider12" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount12" ).val( ui.value );
+						}
+						});
+				$ ( "#amount12" ).val( $( "#slider12" ).slider( "value" )   );
+				
+
+				$( "#slider13" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount13" ).val( ui.value );
+						}
+						});
+				$ ( "#amount13" ).val( $( "#slider13" ).slider( "value" )   );
+
+				
+				$( "#slider14" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount14" ).val( ui.value );
+						}
+						});
+				$ ( "#amount14" ).val( $( "#slider14" ).slider( "value" )   );
+		
+				$( "#slider15" ).slider({
+						range: "max",
+						min: 1,
+						max: 10,
+						value: 10,
+						slide: function( event, ui ) {
+					$( "#amount15" ).val( ui.value );
+						}
+						});
+				$ ( "#amount15" ).val( $( "#slider15" ).slider( "value" )   );
+
+				$( "#slider16" ).slider({
+						range: "max",
+						min: 1,
+						max: 10,
+						value: 10,
+						slide: function( event, ui ) {
+					$( "#amount16" ).val( ui.value );
+						}
+						});
+				$ ( "#amount16" ).val( $( "#slider16" ).slider( "value" )   );
+
+		});
+	</script>
+    </head>
+<body>
+
+
+<form action="/" method="POST">
+					<center>
+
+ <div id="nav">
+					<center>
+
+<div id="tabs">
+<ul>
+<li><a href="#tabs-1">Първа смяна</a></li>
+<li><a href="#tabs-2">Втора смяна</a></li>
+<li><a href="#tabs-3">Text in Sprache</a></li>
+<li><a href="#tabs-4">Text to speech</a></li>
+<li><a href="#tabs-5">YouTube</a></li>
+<li><a href="#tabs-6">Мелодии</a></li>
+<li><a href="#tabs-7">ПОЖАР!</a></li>
+</ul>
+
+ <div id="tabs-1">
+
+<p>Дата: <input type="text" id="datepicker" size="30" name="data"></p>
+
+<table style="width:90%">
+ <tr>
+    <th>Първа смяна</th>
+    <th>Втора смяна</th>
+ </tr>
+  
+<tr>
+	<th>
+		<p>
+			<label for="spinner1">Начало:</label>
+			<input id="spinner1" name="pbegin" value="07:15">
+		</p> 
+	</th>
+   	<th>
+		<p>
+			<label for="spinner2">Начало:</label>
+			<input id="spinner2" name="vbegin" value="13:15">
+		</p> 
+	</th>
+   
+</tr>
+
+  <tr>
+    	<td> 
+    		<p>
+		<label for="amount1">Първи час:</label>
+		<input type="text" id="amount1" name="p1" readonly style="border:0; color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider1" style="width:90%"></div>
+	</td>
+    	<td>
+    		<p>
+		<label for="amount2">Първи час:</label>
+		<input type="text" id="amount2" name="v1" readonly style="border:0;  color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider2" style="width:90%"></div>
+    	</td>		
+  </tr>
+
+  <tr>
+    	<td> 
+    		<p>
+		<label for="amount15">Първо междучасие:</label>
+		<input type="text" id="amount15" name="pp1" readonly style="border:0;  color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider15" style="width:40%"></div>
+	</td>
+    	<td>
+    		<p>
+		<label for="amount16">Първо междучасие:</label>
+		<input type="text" id="amount16" name="vp1" readonly style="border:0;  color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider16" style="width:40%"></div>
+    	</td>		
+  </tr>
+
+ <tr>
+    	<td> 
+    		<p>
+		<label for="amount3">Втори час:</label>
+		<input type="text" id="amount3" name="p2" readonly style="border:0;  color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider3" style="width:90%"></div>
+	</td>
+    <td>
+    		<p>
+		<label for="amount4">Втори час:</label>
+		<input type="text" id="amount4" name="v2" readonly style="border:0;  color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider4" style="width:90%"></div>
+    </td>		
+  </tr>
+
+
+ <tr>
+    	<td> 
+    		<p>
+		<label for="amount5">Трети час:</label>
+		<input type="text" id="amount5" name="p3" readonly style="border:0;  color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider5" style="width:90%"></div>
+	</td>
+    <td>
+    		<p>
+		<label for="amount6">Трети час:</label>
+		<input type="text" id="amount6" name="v3" readonly style="border:0;  color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider6" style="width:90%"></div>
+    </td>		
+  </tr>
+
+ <tr>
+    	<td> 
+    		<p>
+		<label for="amount7">Четвърти час:</label>
+		<input type="text" id="amount7" name="p4" readonly style="border:0;  color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider7" style="width:90%"></div>
+	</td>
+    <td>
+    		<p>
+		<label for="amount8">Четвърти час:</label>
+		<input type="text" id="amount8" name="v4" readonly style="border:0;  color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider8" style="width:90%"></div>
+    </td>		
+  </tr>
+
+ <tr>
+    	<td> 
+    		<p>
+		<label for="amount9">Пети час:</label>
+		<input type="text" id="amount9" name="p5" readonly style="border:0;  color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider9" style="width:90%"></div>
+	</td>
+    <td>
+    		<p>
+		<label for="amount10">Пети час:</label>
+		<input type="text" id="amount10" name="v5" readonly style="border:0;  color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider10" style="width:90%"></div>
+    </td>		
+  </tr>
+
+ <tr>
+    	<td> 
+    		<p>
+		<label for="amount11">Шести час:</label>
+		<input type="text" id="amount11" name="p6" readonly style="border:0;  color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider11" style="width:90%"></div>
+	</td>
+    <td>
+    		<p>
+		<label for="amount12">Шести час:</label>
+		<input type="text" id="amount12" name="v6" readonly style="border:0;  color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider12" style="width:90%"></div>
+    </td>		
+  </tr>
+
+ <tr>
+    	<td> 
+    		<p>
+		<label for="amount13">Седни час:</label>
+		<input type="text" id="amount13" name="p7" readonly style="border:0;  color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider13" style="width:90%"></div>
+	</td>
+    <td>
+    		<p>
+		<label for="amount14">Седни час:</label>
+		<input type="text" id="amount14" name="v7" readonly style="border:0;  color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider14" style="width:90%"></div>
+    </td>		
+  </tr>
+
+</table>
+
+</div>
+
+	<div id="tabs-2">
+	<p>.......</p>
+	</div>
+	<div id="tabs-3">
+	<p>........</p>
+	</div>
+	<div id="tabs-4">
+	<p>.......</p>
+	</div>
+
+	<div id="tabs-5">
+	<p> https://github.com/np1/mps-youtube</p>
+	</div>
+
+	<div id="tabs-6">
+	<p> .......</p>
+	</div>
+
+	<div id="tabs-7">
+	<p> ........</p>
+	</div>
+
+    <input type="submit">
+					</center>
+ </div>
+
+					</center>
+</div>
+
+</form>
+
+
+
+</body>
+</html>

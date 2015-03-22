@@ -1,0 +1,236 @@
+<html>
+    <head>
+	<meta charset="utf-8" />
+	<title>Звънец</title>
+
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.3/themes/redmond/jquery-ui.css">
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+
+	<script>
+		$(function() {
+
+			$( "#datepicker" ).datepicker();
+			$( "#bounce" ).change(function() {
+			$( "#datepicker" ).datepicker( "option", "showAnim", $( this ).val() );
+			});
+
+		$( "#slider1" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount1" ).val( ui.value );
+						}
+						});
+				$ ( "#amount1" ).val( $( "#slider1" ).slider( "value" ) );
+
+			
+		$( "#slider2" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount2" ).val( ui.value );
+						}
+						});
+				$ ( "#amount2" ).val( $( "#slider2" ).slider( "value" )   );
+					var dgd =   $("#slider2" ).slider( "value" );
+					console.log(dgd);	
+								
+				
+				$( "#slider3" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount3" ).val( ui.value );
+						}
+						});
+				$ ( "#amount3" ).val( $( "#slider3" ).slider( "value" )   );
+				
+
+				
+				$( "#slider4" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount4" ).val( ui.value );
+						}
+						});
+				$ ( "#amount4" ).val( $( "#slider4" ).slider( "value" )   );
+				
+
+				$( "#slider5" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount5" ).val( ui.value );
+						}
+						});
+				$ ( "#amount5" ).val( $( "#slider5" ).slider( "value" )   );
+				
+
+
+				$( "#slider6" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount6" ).val( ui.value );
+						}
+						});
+				$ ( "#amount6" ).val( $( "#slider6" ).slider( "value" )   );
+				
+
+
+				$( "#slider7" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount7" ).val( ui.value );
+						}
+						});
+				$ ( "#amount7" ).val( $( "#slider7" ).slider( "value" )   );
+				
+
+				$( "#slider8" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount8" ).val( ui.value );
+						}
+						});
+				$ ( "#amount8" ).val( $( "#slider8" ).slider( "value" )   );
+				
+
+
+				$( "#slider9" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount9" ).val( ui.value );
+						}
+						});
+				$ ( "#amount9" ).val( $( "#slider9" ).slider( "value" )   );
+				
+
+				$( "#slider10" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount10" ).val( ui.value );
+						}
+						});
+				$ ( "#amount10" ).val( $( "#slider10" ).slider( "value" )   );
+				
+
+				$( "#slider11" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount11" ).val( ui.value );
+						}
+						});
+				$ ( "#amount11" ).val( $( "#slider11" ).slider( "value" )   );
+				
+
+				$( "#slider12" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount12" ).val( ui.value );
+						}
+						});
+				$ ( "#amount12" ).val( $( "#slider12" ).slider( "value" )   );
+				
+
+				$( "#slider13" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount13" ).val( ui.value );
+						}
+						});
+				$ ( "#amount13" ).val( $( "#slider13" ).slider( "value" )   );
+
+				
+				$( "#slider14" ).slider({
+						range: "max",
+						min: 10,
+						max: 40,
+						value: 40,
+						slide: function( event, ui ) {
+					$( "#amount14" ).val( ui.value );
+						}
+						});
+				$ ( "#amount14" ).val( $( "#slider14" ).slider( "value" )   );
+		
+
+		});
+	</script>
+    </head>
+<body>
+
+<h1>Начален час: 7.15</h1>
+
+<form action="/" method="POST">
+<p>Date: <input type="text" id="datepicker" size="30" name="data"></p>
+    A Greeting: <input type="text" name="greeting">
+    <br/>
+    Your Name: <input type="text" name="name">
+    <br/>
+	
+<table style="width:90%">
+  <tr>
+    <th>Първа смяна</th>
+    <th>Втора смяна</th>
+  </tr>
+<tr>
+    	<td> 
+    		<p>
+		<label for="amount1">Първи час:</label>
+		<input type="text" id="amount1" name="p1" readonly style="border:0; color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider1"></div>
+	</td>
+    <td>
+    		<p>
+		<label for="amount2">Първи час:</label>
+		<input type="text" id="amount2" name="v1" readonly style="border:0; color:#f6931f; font-weight:bold;">
+		</p>
+		<div id="slider2"></div>
+    </td>		
+  </tr>
+</table>
+
+
+    <input type="submit">
+</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+if diff -q /var/cron/tabs/zvan zvan > /dev/null	; then
+:
+else
+    echo "cp zvan /var/cron/tabs/zvan"
+    echo "/etc/rc.d/cron restart"
+fi
+

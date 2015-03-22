@@ -1,0 +1,16 @@
+#nav {
+    margin: 80px;
+    line-height:30px;
+    background: white;
+    background-color:#EFECCA;
+    width:90%;
+    float:center;
+    padding:5px;
+    box-shadow: 10px 10px 5px 5px black;
+}
+
+body{
+
+       background-color: #046380;
+}
+
